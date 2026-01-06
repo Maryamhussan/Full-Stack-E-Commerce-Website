@@ -1,55 +1,47 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report: Constitution Update
+Version change: N/A → 1.0.0
+Modified principles: None (initial creation)
+Added sections: All principles and sections (initial constitution creation)
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md ✅ needs Constitution Check section update
+- .specify/templates/spec-template.md ✅ no direct updates needed
+- .specify/templates/tasks-template.md ✅ no direct updates needed
+- .specify/templates/phr-template.prompt.md ✅ no direct updates needed
+Runtime docs requiring updates:
+- CLAUDE.md ✅ references constitution but no specific updates needed
+Follow-up TODOs: None
+-->
+# Full-Stack E-Commerce Website (Portfolio Project) Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Specification First
+All behavior must be defined in specifications before implementation.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Traceability
+Every UI component, API endpoint, and data model must trace back to a written spec.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Clarity for Reviewers
+Specifications must be readable by developers with a computer science background.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Reproducibility
+The project must be buildable from scratch using only the specs and repository contents.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Rigor
+No undocumented assumptions, implicit behavior, or speculative features are allowed.
 
-### [PRINCIPLE_6_NAME]
+### Cost Consciousness
+All tools, libraries, services, and platforms must be free tier. No paid APIs or subscriptions are permitted.
 
+## Key Standards
+All implemented features must correspond to an explicit spec. No code may introduce behavior not defined in `/specs`. Figma is a visual reference only, not a behavioral authority. Types, schemas, and APIs must be derived from specs. Each feature spec must define: Inputs, Behavior, Outputs, Edge cases, Constraints.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+Technology: Frontend: Next.js + TypeScript, Backend: Next.js API Routes, Database: SQLite (local) and free-tier PostgreSQL, Authentication: Free authentication methods only, Payments: Stripe test mode only (no real transactions). Development Method: Spec-Driven Development (SDD), No implementation before specification approval.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+Specification Requirements: Specs must be written in Markdown, Specs must reside exclusively in `/specs`, Each feature must have its own spec file, Data models must be specified before database schemas, Error handling behavior must be explicitly documented. Non-Goals: Production-grade scalability, Real payment processing, Refunds or financial reconciliation, Admin dashboards (reserved for future phase), Performance optimization beyond reasonable defaults.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-07 | **Last Amended**: 2026-01-07
