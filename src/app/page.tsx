@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
 import { MOCK_PRODUCTS } from '@/lib/mock-data';
 import ProductCard from '@/components/product/ProductCard';
@@ -8,12 +8,12 @@ import ProductCard from '@/components/product/ProductCard';
 export default function Home() {
   const featured = MOCK_PRODUCTS.slice(0, 3);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
   };
